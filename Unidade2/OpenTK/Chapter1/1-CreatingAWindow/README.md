@@ -30,14 +30,14 @@ Arquivos centrais do projeto:
 ### Program
 
 Responsável por configurar e iniciar a janela.
-Usa bloco using para descarte correto de recursos ao encerrar.  
+Usa o bloco `using` para o descarte correto de recursos ao encerrar.  
 Referência: Program.cs
 
 ### Window
 
 Classe que herda de GameWindow.  
 Implementa lógica por frame no método OnUpdateFrame.  
-Nessa classe, trata apenas entrada de teclado para fechar a janela.  
+Nessa classe, trata apenas a entrada de teclado para fechar a janela.  
 Referência: Window.cs
 
 ### Projeto .NET

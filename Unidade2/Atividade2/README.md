@@ -6,27 +6,27 @@
 
 Lembretes:
 
-- cada questão deste trabalho deve ser separada em novas pastas e projetos executados separadamente. Obrigatoriamente devem usar como base o projeto de exemplo **[CG_N2_Exemplo]**. Lembrem que este projeto também usa o projeto [CG_Biblioteca] disponível na pasta raiz do GitHub da equipe.
-- usem as sub-pasta da Unidade2 do GitHub da sua equipe para desenvolver/entregar o seu código. No caso:
+- cada questão deste trabalho deve ser separada em uma nova pasta, e os projetos devem ser executados separadamente. Obrigatoriamente, devem usar como base o projeto de exemplo **[CG_N2_Exemplo]**. Lembrem-se de que este projeto também usa o projeto [CG_Biblioteca], disponível na pasta raiz do GitHub da equipe;
+- usem as subpastas da Unidade2 do GitHub da sua equipe para desenvolver e entregar o seu código. Neste caso:
   - [atividade 1](#1-círculo-no-centro-do-sru) na pasta **CG_N2_1**  
   - [atividade 2](#2-primitivas-geométricas) na pasta **CG_N2_2**  
   - [atividade 3](#3-sr-palito-dando-seus-primeiros-passos) na pasta **CG_N2_3**  
   - [atividade 4](#4-spline) na pasta **CG_N2_4**  
   - [atividade 5](#5-bbox-dos-círculos) na pasta **CG_N2_5**  
 
-## Inicio
+## Início
 
-Uma maneira de utilizar o exemplo **[CG_N2_Exemplo]** para criar as atividades dessa unidade seria:
+Uma maneira de utilizar o exemplo **[CG_N2_Exemplo]** para criar as atividades desta unidade seria:
 
-1) "baixe" (melhor clonar o repositório) o repositório da disciplina (imagem da esquerda) e o repositório da sua equipe (imagem da direita). Copie/cole a pasta CG_Biblioteca, mas cuide para ser no lugar certo.  
+1. “Baixe” (é melhor clonar) o repositório da disciplina (imagem da esquerda) e o repositório da sua equipe (imagem da direita). Copie e cole a pasta `CG_Biblioteca`, mas cuide para colocá-la no lugar certo.  
 ![Atividade2_inicioA](Atividade2_inicioA.png)  
-2) Agora copie/cole a pasta CG_N2_Exemplo, mas novamente *cuide* para ser no lugar certo.  
+2. Agora, copie e cole a pasta `CG_N2_Exemplo`, mas novamente *cuide* para colocá-la no lugar certo.  
 ![Atividade2_inicioB](Atividade2_inicioB.png)  
-3) E, por fim, copie/cole TODO o conteúdo da pasta CG_N2_Exemplo para a pasta do exercício em si.  
+3. Por fim, copie e cole TODO o conteúdo da pasta `CG_N2_Exemplo` na pasta do exercício.  
 ![Atividade2_inicioC](Atividade2_inicioC.png)  
-4) Antes de inciar a atividade teste para verificar se deu tudo certo, abrindo o arquivo CG_N2_Exemplo.code-workspace no VSCode, e executando o projeto.  
+4. Antes de iniciar a atividade, teste o projeto para verificar se tudo deu certo. Para isso, abra o arquivo `CG_N2_Exemplo.code-workspace` no VSCode e execute o projeto.  
 
-Observe que no projeto CG_N2_Exemplo tem arquivos a mais do que vai ser usado em cada exercício, se quiser esses arquivos podem ser deletados.  
+Observe que o projeto `CG_N2_Exemplo` contém mais arquivos do que serão usados em cada exercício. Se quiser, esses arquivos podem ser excluídos.  
 
 ### Especificação PlantUML
 
@@ -44,19 +44,19 @@ class MinhaClasse {
 
 ![MinhaClasse](https://www.plantuml.com/plantuml/svg/JSan2e0m30NGlQVuu2XUm4bm5hn2gaK3iO4sTH7lBdNHxS4Rib6oSeXRX7B6n76diJBWSW3GWIonBwPpufDMxS7Htcf-fHOshfajSTpURxylNdZH7bvLtEs64DToo0C0 "MinhaClasse")
 
-A espeicificação da CG_Biblioteca está em:
-![CG_Bilbioteca](../../CG_Biblioteca/svg/plantuml/include.svg)  
+A especificação da `CG_Biblioteca` está em:
+![CG_Biblioteca](../../CG_Biblioteca/svg/plantuml/include.svg)  
 
 ## 1. Círculo no centro do SRU  
 
-wImplemente uma aplicação para desenhar um círculo no centro do Sistema de Referência do Universo (SRU), com raio de valor 0.5. Utilize 72 pontos (com um tamanho do ponto de 5) simetricamente distribuídos sobre o perímetro do círculo, de forma que o resultado final seja o mais parecido com o código: [CG_N2_1](./CG_N2_1). Neste caso crie uma nova classe com o nome ```Circulo``` em ```Circulo.cs```, e usem como base as classes: [Ponto.cs](../CG_N2_Exemplo/Ponto.cs), [SegReta.cs](../CG_N2_Exemplo/SegReta.cs), [Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs) e [Poligono.cs](../CG_N2_Exemplo/Poligono.cs).  
+Implemente uma aplicação para desenhar um círculo no centro do Sistema de Referência do Universo (SRU), com raio de valor 0.5. Utilize 72 pontos (com tamanho de ponto igual a 5) simetricamente distribuídos sobre o perímetro do círculo, de forma que o resultado final seja o mais parecido com o código: [CG_N2_1](./CG_N2_1). Neste caso, crie uma nova classe com o nome `Circulo` em `Circulo.cs` e use como base as classes: [Ponto.cs](../CG_N2_Exemplo/Ponto.cs), [SegReta.cs](../CG_N2_Exemplo/SegReta.cs), [Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs) e [Poligono.cs](../CG_N2_Exemplo/Poligono.cs).  
 
 Observações:  
 
 - desenhe somente os eixos positivos x e y, cada um com comprimento igual a 0.5;  
-- experimente mudar a cor de fundo da tela e a cor de desenho dos pontos para ficarem igual a figura a cima;  
+- experimente mudar a cor de fundo da tela e a cor de desenho dos pontos para que fiquem iguais às da figura acima;  
 - utilize as funções sin(ang) e cos(ang) para calcular os pontos do círculo da Classe [CG_Biblioteca_Matematica] fornecida;  
-- não é permitido usar o comando circle do OpenGL e nem outra implementação que não usem as funções da classe [CG_Biblioteca_Matematica].  
+- não é permitido usar o comando `circle` do OpenGL nem outra implementação que não use as funções da classe [CG_Biblioteca_Matematica].  
 
 Especificação:  
 
@@ -65,11 +65,11 @@ Especificação:
 
 ## 2. Primitivas geométricas  
 
-Nesta aplicação a ideia é explorar a utilização das “primitivas geométricas” de forma que o resultado final seja o mais parecido com o código: [CG_N2_2](./CG_N2_2). Aqui se pode usar a classe [Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs).  
+Nesta aplicação, a ideia é explorar a utilização das “primitivas geométricas” de forma que o resultado final seja o mais parecido com o código: [CG_N2_2](./CG_N2_2). Aqui, pode-se usar a classe [Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs).  
 
 No caso a interação deve ser:  
 
-- para alternar entre as “primitivas geométricas” usem a tecla de “barra de espaço”;  
+- para alternar entre as “primitivas geométricas”, usem a tecla de “barra de espaço”;  
 - as “primitivas geométricas” que devem ser utilizadas são: Points, Lines, LineLoop, LineStrip, Triangles, TriangleStrip e TriangleFan.  
 
 Especificação:  
@@ -79,19 +79,19 @@ Especificação:
 
 ## 3. Sr. Palito, dando seus primeiros passos  
 
-Agora, crie uma nova aplicação com o objetivo de um Segmento de Reta (SR) se transformar no Sr. "Palito". Para isto usem como base as classes [SegReta.cs](../CG_N2_Exemplo/SegReta.cs "SegReta.cs") e ```Circulo.cs``` criada no [Exercício 1](#1-círculo-no-centro-do-sru "Exercício 1").
+Agora, crie uma nova aplicação com o objetivo de transformar um Segmento de Reta (SR) no Sr. “Palito”. Para isso, use como base as classes [SegReta.cs](../CG_N2_Exemplo/SegReta.cs "SegReta.cs") e `Circulo.cs`, criada no [Exercício 1](#1-círculo-no-centro-do-sru "Exercício 1").
 
-Como o Sr. Palito está dando os seus primeiros passos por enquanto ele só consegue:  
+Como o Sr. Palito está dando os seus primeiros passos, por enquanto ele só consegue:  
 
-- se mover para os lados usando as teclas Q (esquerda) e W (Direita);
+- mover-se para os lados usando as teclas Q (esquerda) e W (direita);
 - usar as teclas A (diminuir) e S (aumentar) para mudar o seu tamanho (raio);  
 - usar as teclas Z (diminuir) e X (aumentar) para girar (ângulo).  
 
-Ao Sr. Palito "nasce" está com os seus "pés" na origem, e sua "cabeça" na posição definida com raio de valor 0.5 e ângulo 45º.  
+O Sr. Palito “nasce” com os seus “pés” na origem e sua “cabeça” na posição definida pelo raio de valor 0.5 e pelo ângulo de 45°.  
 
-Ah ... o Sr. Palito não se parece muito com o "desenho" do [segmento de reta](../CG_N2_Exemplo/SegReta.cs) que representa um raio de uma [circunferência](#1-círculo-no-centro-do-sru) !!  
+Ah... o Sr. Palito não se parece muito com o “desenho” do [segmento de reta](../CG_N2_Exemplo/SegReta.cs) que representa o raio de uma [circunferência](#1-círculo-no-centro-do-sru)!  
 
-Se quiser como é o Sr. Palito "engatinhando" nos seus primeiros dias de "vida" olhem o código:  [CG_N2_3](./CG_N2_3).  
+Se quiserem ver como é o Sr. Palito “engatinhando” nos seus primeiros dias de “vida”, consultem o código: [CG_N2_3](./CG_N2_3).  
 
 Especificação:  
 
@@ -100,25 +100,25 @@ Especificação:
 
 ## 4. Spline  
 
-Já esta aplicação o seu objetivo é poder desenhar uma spline (curva polinomial) que permita alterar a posição (x,y) dos pontos de controle dinamicamente utilizando o teclado.  
+Esta aplicação tem como objetivo desenhar uma spline (curva polinomial) que permita alterar dinamicamente a posição `(x, y)` dos pontos de controle utilizando o teclado.  
 
 No caso a interação deve ser:  
 
-– para mudar entre o ponto de controle selecionado (em cor vermelha) usem a tecla de “barra de espaço”;  
-– para mover o ponto selecionado (um dos pontos de controle) usar as teclas C (Cima), B (Baixo), E (Esquerda) e D (Direita);  
-– as teclas do sinal de mais (+) e vírgula (,) podem aumentar e diminui a quantidade de pontos calculados na spline;  
-– a spline deve ser desenha usando linhas de cor amarela;  
-– o poliedro de controle deve ser desenhado usando uma linha de cor ciano.  
+- para alternar o ponto de controle selecionado (em vermelho), usem a tecla de “barra de espaço”;  
+- para mover o ponto selecionado (um dos pontos de controle), usem as teclas C (cima), B (baixo), E (esquerda) e D (direita);  
+- as teclas do sinal de mais (+) e da vírgula (,) podem aumentar e diminuir a quantidade de pontos calculados na spline;  
+- a spline deve ser desenhada usando linhas amarelas;  
+- o poliedro de controle deve ser desenhado usando uma linha ciano.  
 <!-- – ao pressionar a tecla R os pontos de controle devem voltar aos valores iniciais;   -->
 
-**ATENÇÃO**: não é permitido usar o comando spline do OpenGL, sendo só permitido usar UMA das formas de splines “demonstradas em aula”. Ao mover um dos pontos de controle, o poliedro e a spline deve se ajustar aos novos valores deste ponto.  
-Veja o exemplo no vídeo a baixo.  
+**ATENÇÃO**: não é permitido usar o comando `spline` do OpenGL; só é permitido usar UMA das formas de splines “demonstradas em aula”. Ao mover um dos pontos de controle, o poliedro e a spline devem se ajustar aos novos valores desse ponto.  
+Veja o exemplo no vídeo abaixo.  
 
 Usem as classes:
 
 - [SegReta.cs](../CG_N2_Exemplo/SegReta.cs "SegReta.cs") para desenhar o poliedro de controle;  
-- [Ponto.cs](../CG_N2_Exemplo/Ponto.cs "Ponto.cs") para desenhar os pontos de controles; e  
-- ```Spline.cs```, crie uma nova classe para representar o objeto gráfico Spline.  
+- [Ponto.cs](../CG_N2_Exemplo/Ponto.cs "Ponto.cs") para desenhar os pontos de controle; e  
+- `Spline.cs`: crie uma nova classe para representar o objeto gráfico Spline.  
 
 O resultado final deve ser o mais parecido com o código: [CG_N2_4](./CG_N2_4/).  
 
@@ -129,22 +129,22 @@ Especificação:
 
 ## 5. BBox dos círculos
 
-E por fim, esta aplicação tem o objetivo de fazer um ```joystick virtual```. Basicamente deve-se desenhar dois círculos (um menor e outro maior) e poder mover o círculo menor, mas sem deixar ele (o centro do círculo menor) sair dos limites do círculo maior. Para mover o centro do círculo menor usar as teclas C (Cima), B (Baixo), E (Esquerda) e D (Direita).  
+Por fim, esta aplicação tem como objetivo criar um `joystick virtual`. Basicamente, devem-se desenhar dois círculos (um menor e outro maior) e permitir o movimento do círculo menor sem deixar que seu centro saia dos limites do círculo maior. Para mover o centro do círculo menor, usem as teclas C (cima), B (baixo), E (esquerda) e D (direita).  
 
-Para controlar o movimento do centro do círculo menor deve ser usado (neste ordem):  
+Para controlar o movimento do centro do círculo menor, devem ser usados, nesta ordem:  
 
-– um teste inicial pela BBox interna do círculo maior  
-– seguido do cálculo da distância (euclidiana, sem raiz)  
+- um teste inicial pela BBox interna do círculo maior;  
+- em seguida, o cálculo da distância (euclidiana, sem raiz).  
 
   ![\normalsize&space;distancia=\sqrt{(x_{2}-x_{1})^2+(y_{2}-y_{1})^2}](https://latex.codecogs.com/svg.latex?\normalsize&space;distancia=\sqrt{(x_{2}-x_{1})^2+(y_{2}-y_{1})^2})  
 
 Aqui só use as classes:
 
-- ```Circulo.cs```: para criar os círculos maior e menor (lembre, a [atividade 1](#1-círculo-no-centro-do-sru) já criou uma classe círculo)  
-- ```Ponto.cs``` ([Ponto.cs](../CG_N2_Exemplo/Ponto.cs)): para criar o ponto do centro do círculo menor  
-- ```Retangulo.cs``` ([Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs)): para criar a representação visual da BBox interna  
+- `Circulo.cs`: para criar os círculos maior e menor (lembre-se de que a [atividade 1](#1-círculo-no-centro-do-sru) já criou uma classe círculo);  
+- `Ponto.cs` ([Ponto.cs](../CG_N2_Exemplo/Ponto.cs)): para criar o ponto do centro do círculo menor;  
+- `Retangulo.cs` ([Retangulo.cs](../CG_N2_Exemplo/Retangulo.cs)): para criar a representação visual da BBox interna.  
 
-O resultado final deve ser o mais parecido com o código:  [CG_N2_5](./CG_N2_5).  
+O resultado final deve ser o mais parecido com o código: [CG_N2_5](./CG_N2_5).  
 
 Especificação:  
 
@@ -153,8 +153,8 @@ Especificação:
 
 ## Atenção
 
-A avaliação da atividade envolve o desenvolvimento das questões acima apresentadas, mas o mais importante é o integrante da equipe demonstrar conhecimento além do código desenvolvido, também os conceitos apresentados em aula relacionados com a atividade em si.  
-Cuide com o prazo de entrega observando o [cronograma](../../cronograma.md).
+A avaliação da atividade envolve o desenvolvimento das questões apresentadas acima, mas o mais importante é que o integrante da equipe demonstre conhecimento não apenas do código desenvolvido, mas também dos conceitos apresentados em aula relacionados à própria atividade.  
+Atente-se ao prazo de entrega indicado no [cronograma](../../cronograma.md).
 
 ## Gabarito
 
@@ -162,4 +162,4 @@ Cuide com o prazo de entrega observando o [cronograma](../../cronograma.md).
 
 ----------
 
-## ⏭ [Unidade 3)](../../Unidade3/README.md "Unidade 3")  
+## ⏭ [Unidade 3](../../Unidade3/README.md "Unidade 3")  

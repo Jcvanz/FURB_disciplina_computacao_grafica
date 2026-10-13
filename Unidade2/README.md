@@ -1,7 +1,7 @@
 # Computação Gráfica - Unidade 2  
 
 Conceitos básicos de Computação Gráfica: estruturas de dados para geometria, sistemas de coordenadas na biblioteca gráfica (OpenGL/OpenTK), primitivas básicas (vértices, linhas, polígonos, círculos e curvas cúbicas – splines).  
-Objetivo: aplicar os conceitos básicos de sistemas de referências e modelagem geométrica em Computação Gráfica.  
+Objetivo: aplicar os conceitos básicos de sistemas de referência e modelagem geométrica em Computação Gráfica.  
 
 [Anotações do quadro](aulaAnotacoesQuadro)  
 
@@ -9,8 +9,8 @@ Objetivo: aplicar os conceitos básicos de sistemas de referências e modelagem 
 
 ## Ambiente de Desenvolvimento
 
-Para iniciar as atividades precisamos configurar o [Ambiente de Desenvolvimento](AmbienteDesenvolvimento.md "Ambiente de Desenvolvimento")  
-Agora que já temos o Ambiente de Desenvolvimento instalado vamos testá-lo usando alguns projetos de exemplo: [OpenTK_TestarAmbiente](./OpenTK/README.md).  
+Para iniciar as atividades, precisamos configurar o [Ambiente de Desenvolvimento](AmbienteDesenvolvimento.md "Ambiente de Desenvolvimento").  
+Agora que já temos o Ambiente de Desenvolvimento instalado, vamos testá-lo usando alguns projetos de exemplo: [OpenTK_TestarAmbiente](./OpenTK/README.md).  
 
 ## Conteúdo
 
@@ -199,7 +199,7 @@ Agora que já temos o Ambiente de Desenvolvimento instalado vamos testá-lo usan
   - canais independentes: geometria e imagem
     - ligação via mapeamento de textura
 - “Renderização” dependente do estado
-  - cores, materiais, fontes de luz, etc.
+  - cores, materiais, fontes de luz etc.
 
 ### OpenGL - Sistema de Janelas
 
@@ -209,13 +209,13 @@ Agora que já temos o Ambiente de Desenvolvimento instalado vamos testá-lo usan
   - não possui funções de entrada
 - Necessita interagir com o sistema operacional e o sistema de janelas
   - interface dependente do sistema é mínima
-    - realizada através de bibliotecas adicionais: GLX, AGL, WGL
+    - realizada por meio de bibliotecas adicionais: GLX, AGL, WGL
 
 ### OpenGL - GLU, OpenGL Utility Library
 
 - Funções para auxiliar a tarefa de produzir imagens complexas
   - manipulação de imagens
-  - polígonos não-convexos
+  - polígonos não convexos
   - curvas
   - superfícies
   - esferas
@@ -249,7 +249,7 @@ API: Interface para Programação de Aplicações
 - Registrar funções de entrada de callback
   - desenho (“renderização”)
   - redimensionamento do canvas
-  - entrada: mouse, teclado, etc.
+  - entrada: mouse, teclado etc.
 
 ### Programação Convencional
 
@@ -303,7 +303,7 @@ Especificadas por vértices.
 
 - Splines (ou curva polinomial)
   - origem:
-    - desenvolvida: De Casteljau em 1957 (P. De Casteljau, Citröen)
+    - desenvolvida: De Casteljau em 1957 (P. De Casteljau, Citroën)
     - formalizado: Bézier 1960 (Pierre Bézier)
     - aplicações CAD/CAM
   - pontos de controle
@@ -354,7 +354,7 @@ Com 2, 3, 4, 5 ou n pontos de controle.
 
 ![Código e resultado gráfico do exemplo de spline](cg-slides_u2_imagens/slide-24-spline-codigo.png)
 
-### Splines (Bezier)
+### Splines (Bézier)
 
 $$
 B(t) = (1-t)^3 P_0 + 3t(1-t)^2 P_1 + 3t^2(1-t)P_2 + t^3P_3, \quad t \in \[0,1].
@@ -430,9 +430,9 @@ public double RetornaY(double a){
 
 ## ⏭ [Unidade 3](../Unidade3/README.md "Unidade 3")  
 
-## Principais Referências Bibliográficas​
+## Principais referências bibliográficas
 
-O material utilizado nesta disciplina é baseado nessas Referências Bibliográficas​.  
+O material utilizado nesta disciplina é baseado nessas referências bibliográficas.  
 
 ### Links OpenGL
 
@@ -464,7 +464,7 @@ O material utilizado nesta disciplina é baseado nessas Referências Bibliográf
 
 <https://github.com/LDTTFURB/site/tree/main/ProjetosEnsino/Topicos/CSharp>  
 
-----------
+----
 
 <!--
 TODO: arrumar as fontes bibliográficas  

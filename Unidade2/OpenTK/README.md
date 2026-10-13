@@ -1,12 +1,12 @@
 # Unidade 2 - OpenTK: Testar Ambiente
 
-Para desenvolver as atividades abaixo primeiro precisa ter o [Ambiente de Desenvolvimento](../AmbienteDesenvolvimento.md "Ambiente de Desenvolvimento") instalado.  
+Para desenvolver as atividades abaixo, primeiro é preciso ter o [Ambiente de Desenvolvimento](../AmbienteDesenvolvimento.md "Ambiente de Desenvolvimento") instalado.  
 
 ## 1-CreatingAWindow
 
 Cria uma janela usando o OpenTK.  
 Ver a pasta: [1-CreatingAWindow](./Chapter1/1-CreatingAWindow/)  
-Este projeto usar a definição de Shaders: [./Common](./Common/)  
+Este projeto usa a definição de shaders: [./Common](./Common/)  
 
 Diagrama de Classes:  
 ![Diagrama de Classes](./Chapter1/1-CreatingAWindow/svg/plantuml/include.svg)  
@@ -15,14 +15,14 @@ Diagrama de Classes:
 
 Exibe a representação de um triângulo usando OpenTK.  
 Ver a pasta: [2-HelloTriangle](./Chapter1/2-HelloTriangle)  
-Este projeto usar a definição de Shaders: [./Common](./Common)  
+Este projeto usa a definição de shaders: [./Common](./Common)  
 
 Diagrama de Classes:  
 ![Diagrama de Classes](./Chapter1/2-HelloTriangle/svg/plantuml/include.svg)  
 
 ## Atividade de Teste
 
-Usando o fonte do projeto: **2-HelloTriangle** faça.
+Usando o código-fonte do projeto **2-HelloTriangle**, faça os exercícios a seguir.
 
 ### Exercício A
 

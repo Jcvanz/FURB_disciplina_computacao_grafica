@@ -9,7 +9,7 @@ Este workspace é um exemplo didático de OpenTK + OpenGL para renderizar um tri
 ### Estrutura funcional
 
 - Entrada da aplicação em Program.cs:9: cria as configurações da janela e inicia o loop principal.
-- Lógica da janela/renderização em Window.cs:10: inicializa recursos OpenGL, desenha por frame, trata teclado e resize, e libera recursos.
+- Lógica da janela/renderização em Window.cs:10: inicializa recursos OpenGL, desenha por frame, trata teclado e redimensionamento e libera recursos.
 - Shaders GLSL em shader.vert:5 e shader.frag:1: definem posição dos vértices e cor final dos pixels.
 - Configuração do projeto em 2-HelloTriangle.csproj:1: alvo .NET 9, pacotes OpenTK/StbImageSharp, cópia dos shaders para a pasta de saída.
 - Diagramas simples de apoio em Program.puml:1 e Window.puml:1.
@@ -28,10 +28,10 @@ Este workspace é um exemplo didático de OpenTK + OpenGL para renderizar um tri
 - O método Main cria NativeWindowSettings (800x600, título e compatibilidade com macOS) em Program.cs:11.
 - Instancia Window e chama Run em Program.cs:19.
 - O GameWindow dispara callbacks de ciclo de vida:
-  - OnLoad uma vez, para setup
+  - OnLoad uma vez, para configuração
   - OnUpdateFrame repetidamente, para lógica/entrada
   - OnRenderFrame repetidamente, para desenho
-  - OnResize quando dimensão muda
+  - OnResize quando a dimensão muda
   - OnUnload ao encerrar
 
 #### Fluxo detalhado por callback
@@ -57,7 +57,7 @@ Este workspace é um exemplo didático de OpenTK + OpenGL para renderizar um tri
 
 ### Parte crítica A: Pipeline de dados CPU → GPU
 
-- Vetores de vértice no CPU: array _vertices em Window.cs:16.
+- Vetores de vértice na CPU: array _vertices em Window.cs:16.
 - Upload para GPU: GL.BufferData em Window.cs:82.
 - Estrutura dos atributos: GL.VertexAttribPointer em Window.cs:106 com:
   - location = 0
@@ -75,7 +75,7 @@ Sem esse alinhamento entre layout C# e layout GLSL, o shader recebe dados incorr
 - No C#, o VAO aponta o atributo 0 para o VBO: Window.cs:106.
 
 Por que é crítico:  
-Location do shader e índice do VertexAttribPointer precisam coincidir exatamente.
+A localização do shader e o índice do VertexAttribPointer precisam coincidir exatamente.
 
 ### Parte crítica C: Transformação final de posição
 
@@ -97,7 +97,7 @@ Sem saída de cor válida no fragment shader, o rasterizador não gera o resulta
 ### Parte crítica E: Recursos externos (arquivos shader)
 
 - Carga dos shaders por caminho relativo em Window.cs:117.
-- Garantia de cópia para output em 2-HelloTriangle.csproj:10, 2-HelloTriangle.csproj:24 e 2-HelloTriangle.csproj:27.
+- Garantia de cópia para a saída em 2-HelloTriangle.csproj:10, 2-HelloTriangle.csproj:24 e 2-HelloTriangle.csproj:27.
 
 Por que é crítico:  
 Se os arquivos não estiverem no diretório de execução, ocorre erro de leitura de arquivo ao iniciar.
@@ -154,11 +154,11 @@ Causas típicas: erro ao carregar shader, mismatch de location, viewport errado,
 - Por que usar VAO se já tenho VBO?
 VBO guarda dados; VAO guarda a interpretação desses dados para os atributos do shader.
 
-- Por que atualizar viewport no resize?
+- Por que atualizar o viewport no redimensionamento?
 Sem isso, a área de desenho OpenGL não acompanha o tamanho da janela.
 
 - Por que chamar SwapBuffers?
-A janela é double-buffered; sem swap você desenha no buffer de trás e não apresenta no monitor.
+A janela usa buffer duplo; sem a troca, o desenho fica no buffer de trás e não é apresentado no monitor.
 
 - Por que o triângulo está amarelo?
 Porque o fragment shader define cor fixa vec4(1,1,0,1).
